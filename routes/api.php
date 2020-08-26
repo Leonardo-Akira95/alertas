@@ -19,8 +19,8 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
 
-Route::get('alerta', 'AlertaController@index');
-Route::get('alerta/{alerta}', 'AlertaController@show');
-Route::post('alerta', 'AlertaController@store');
-Route::put('alerta/{alerta}', 'AlertaController@update');
-Route::delete('alerta/{alerta}', 'AlertaController@delete');
+Route::get('alertas', 'AlertaController@index');
+Route::get('alertas/{id}', 'AlertaController@show');
+Route::post('alertas', 'AlertaController@store');
+Route::put('alertas/{id}', 'AlertaController@update');
+Route::delete('alertas/{id}', 'AlertaController@delete');
