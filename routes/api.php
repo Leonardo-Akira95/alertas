@@ -24,3 +24,9 @@ Route::get('alertas/{id}', 'AlertaController@show');
 Route::post('alertas', 'AlertaController@store');
 Route::put('alertas/{id}', 'AlertaController@update');
 Route::delete('alertas/{id}', 'AlertaController@delete');
+
+Route::get('parametros', 'ParametroController@index');
+Route::get('parametros/{id}', 'ParametroController@show');
+Route::post('parametros', 'ParametroController@store');
+Route::put('parametros/{id}', 'ParametroController@update');
+Route::delete('parametros/{id}', 'ParametroController@delete');

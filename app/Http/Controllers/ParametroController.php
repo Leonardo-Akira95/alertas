@@ -1,37 +1,35 @@
 <?php
 
 namespace App\Http\Controllers;
-use App\Alerta;
+use App\Parametro;
 
 use Illuminate\Http\Request;
 
-class AlertaController extends Controller
+class ParametroController extends Controller
 {
-
     public function index(){
-        return Alerta::all();
+        return Parametro::all();
     }
     
     public function show($id){
-        return Alerta::find($id);
+        return Parametro::find($id);
     }
 
     public function store(Request $request){
-        return Alerta::create($request->all());
+        return Parametro::create($request->all());
     }
 
     public function update(Request $request, $id){
-        $article = Alerta::findOrFail($id);
+        $article = Parametro::findOrFail($id);
         $article->update($request->all());
 
         return $article;
     }
 
     public function delete(Request $request, $id){
-        $article = Alerta::findOrFail($id);
+        $article = Parametro::findOrFail($id);
         $article->delete();
 
         return 204;
     }
-
 }
